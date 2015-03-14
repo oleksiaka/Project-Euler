@@ -1,7 +1,7 @@
 months = [31,28,31,30,31,30,31,31,30,31,30,31]
 
 count = 0
-weekdays = 1
+DayOfWeek = 1
 for x in range(1900,2001):
 
     if x % 4 == 0 and x != 1900:
@@ -14,18 +14,13 @@ for x in range(1900,2001):
 
         while days < months[y]:
             if x > 1900:
-                if days == 0 and weekdays == 0:
+                if days == 0 and DayOfWeek == 0:
                     count += 1
-                    print(count,x,y)
-            if weekdays < 6:
-                weekdays += 1
+            if DayOfWeek < 6:
+                DayOfWeek += 1
             else:
-                weekdays = 0
+                DayOfWeek = 0
 
             days += 1
 
-            
-            
-            
-            
-    
+print(count)
